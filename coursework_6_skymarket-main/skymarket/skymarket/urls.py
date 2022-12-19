@@ -16,10 +16,10 @@ urlpatterns = [
          SpectacularSwaggerView.as_view(url_name='schema'),
          name='swagger-ui'),
 
-    path("", include("users.urls")),
-    path("", include("ads.urls")),
+    path("api/", include("users.urls")),
+    path("api/", include("ads.urls")),
 
-    path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
-    path("refresh/", TokenRefreshView.as_view(), name="token_refresh"),
+    path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("api/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

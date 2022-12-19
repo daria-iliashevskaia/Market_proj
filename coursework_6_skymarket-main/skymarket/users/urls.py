@@ -11,7 +11,7 @@ user_router.register('users', UserViewSet, basename="users")
 urlpatterns = [
     path("", include(user_router.urls)),
 ]
-git
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
